@@ -11,7 +11,7 @@ import srs.infra.AbstractEvent;
 @ToString
 public class ReservReturned extends AbstractEvent {
 
-    private Long id;
+    private Integer id;
     private String employeeId;
     private Integer seatId;
 

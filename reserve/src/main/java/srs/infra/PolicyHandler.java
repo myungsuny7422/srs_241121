@@ -18,7 +18,7 @@ import srs.domain.*;
 public class PolicyHandler {
 
     @Autowired
-    Repository Repository;
+    ReserveRepository reserveRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}

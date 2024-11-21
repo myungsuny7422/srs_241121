@@ -6,6 +6,9 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import srs.SeatApplication;
+import srs.domain.ResigterPlaced;
+import srs.domain.SeatReserved;
+import srs.domain.SeatReturned;
 
 @Entity
 @Table(name = "Seat_table")
@@ -23,6 +26,24 @@ public class Seat {
     private String reservedEmployeeId;
 
     private Date reservedDt;
+
+    @PostPersist
+    public void onPostPersist() {
+        SeatReserved seatReserved = new SeatReserved(this);
+        seatReserved.publishAfterCommit();
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        ResigterPlaced resigterPlaced = new ResigterPlaced(this);
+        resigterPlaced.publishAfterCommit();
+    }
+
+    @PostRemove
+    public void onPostRemove() {
+        SeatReturned seatReturned = new SeatReturned(this);
+        seatReturned.publishAfterCommit();
+    }
 
     public static SeatRepository repository() {
         SeatRepository seatRepository = SeatApplication.applicationContext.getBean(

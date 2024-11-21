@@ -5,14 +5,14 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import SeatSeatManager from "./components/listers/SeatSeatCards"
+import SeatSeatDetail from "./components/listers/SeatSeatDetail"
 
 import HrHrManager from "./components/listers/HrHrCards"
 import HrHrDetail from "./components/listers/HrHrDetail"
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import ReserveReserveManager from "./components/listers/ReserveReserveCards"
+import ReserveReserveDetail from "./components/listers/ReserveReserveDetail"
 
 
 
@@ -21,14 +21,14 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/seats/seats',
+                name: 'SeatSeatManager',
+                component: SeatSeatManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/seats/seats/:id',
+                name: 'SeatSeatDetail',
+                component: SeatSeatDetail
             },
 
             {
@@ -43,14 +43,14 @@ export default new Router({
             },
 
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/reserves/reserves',
+                name: 'ReserveReserveManager',
+                component: ReserveReserveManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/reserves/reserves/:id',
+                name: 'ReserveReserveDetail',
+                component: ReserveReserveDetail
             },
 
 

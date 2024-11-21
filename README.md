@@ -35,7 +35,7 @@ mvn spring-boot:run
 ## Test by API
 - seat
 ```
- http :8088/ 
+ http :8088/seats id="id" seatName="seatName" reservedYn="reservedYN" reservedEmployeeId="reservedEmployeeId" reservedDt="reservedDT" 
 ```
 - hr
 ```
@@ -43,7 +43,7 @@ mvn spring-boot:run
 ```
 - reserve
 ```
- http :8088/ 
+ http :8088/reserves id="id" employeeId="employeeId" seatId="seatId" 
 ```
 - dashboard
 ```
