@@ -6,6 +6,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import srs.domain.*;
 
 @RepositoryRestResource(collectionResourceRel = "views", path = "views")
-public interface ViewRepository extends PagingAndSortingRepository<View, Long> {
-    List<View> findBySeatId(Long seatId);
-}
+public interface ViewRepository
+    extends PagingAndSortingRepository<View, Long> {}

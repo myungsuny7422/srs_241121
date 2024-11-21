@@ -8,7 +8,7 @@ import srs.infra.AbstractEvent;
 @Data
 public class UpdateLocationed extends AbstractEvent {
 
-    private Integer id;
+    private Long id;
     private Integer employeeId;
     private Integer locationId;
     private String locationName;
