@@ -123,7 +123,7 @@
                 'seatName': '',
                 'reservedYn': false,
                 'reservedEmployeeId': '',
-                'reservedDt': '2024-11-21',
+                'reservedDt': '2024-11-22',
             }
         },
         methods: {
